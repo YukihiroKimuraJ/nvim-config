@@ -7,9 +7,8 @@ require('copilot').setup {
     auto_trigger = true, -- show ghost-text suggestions as you type
     keymap = {
       accept = '<C-l>', -- accept the suggestion
-      next = '<C-]>', -- cycle to next suggestion
-      prev = '<C-[>', -- cycle to previous suggestion
-      dismiss = '<C-h>', -- dismiss current suggestion
+      -- next/prev/dismiss keep copilot's Alt-based defaults (<M-]> / <M-[> / <C-]>)
+      -- to avoid clobbering <Esc> (== <C-[>) and <BS> (== <C-h>) in the terminal.
     },
   },
   panel = { enabled = false },
